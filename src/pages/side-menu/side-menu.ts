@@ -31,9 +31,9 @@ export class SideMenuPage {
     console.log('ionViewDidLoad SideMenuPage');
   }
 
-  openPage(p) {
-    console.log(p);
-
+  openPage(page) {
+    console.log(page);
+    this.nav.setRoot(page.pageName);
   }
 
   isActive(p) {
