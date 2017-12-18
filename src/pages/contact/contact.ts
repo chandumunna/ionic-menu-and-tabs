@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
-@Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+
+@IonicPage({
+  name: 'my-contact'
 })
-export class LoginPage {
+@Component({
+  selector: 'page-contact',
+  templateUrl: 'contact.html',
+})
+export class ContactPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-
-  doLogin() {
-    this.navCtrl.setRoot('SideMenuPage');
+    console.log('ionViewDidLoad ContactPage');
   }
 
 }

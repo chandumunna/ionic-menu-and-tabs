@@ -17,18 +17,27 @@ export interface PageInterface {
 export class SideMenuPage {
 
   @ViewChild(Nav) nav: Nav;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+
+  rootPage = 'my-profile';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   pages: PageInterface[] = [
-    { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
-    { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
-    { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle' },
+    { title: 'My profile', pageName: 'my-profile', icon: 'home' },
+    { title: 'Contact', pageName: 'my-contact', icon: 'contact' },
   ];
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SideMenuPage');
+  }
+
+  openPage(p) {
+    console.log(p);
+
+  }
+
+  isActive(p) {
+
   }
 
 }
