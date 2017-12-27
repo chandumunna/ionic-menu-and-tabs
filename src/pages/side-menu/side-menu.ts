@@ -1,13 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, MenuController } from 'ionic-angular';
-
-export interface PageInterface {
-  title: string;
-  pageName: string;
-  tabComponent?: any;
-  index?: number;
-  icon: string;
-}
+import { PageInterface } from "../../shared/interface/pages.interface";
 
 @IonicPage()
 @Component({

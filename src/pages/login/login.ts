@@ -10,12 +10,9 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
-  ionViewDidLoad() {
-    // this.menuCtrl.enable(false, 'menuOne');
-    // this.menuCtrl.enable(false, 'menuTwo');
-  }
+  ionViewDidLoad() { }
 
   MenuOne() {
     this.navCtrl.setRoot('SideMenuPage', {
