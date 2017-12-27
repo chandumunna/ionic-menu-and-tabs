@@ -51,6 +51,7 @@ export class SideMenuPage {
   openPage(page) {
     console.log(page);
     this.nav.setRoot(page.pageName);
+    // this.navCtrl.push(page.pageName);
   }
 
   isActive(p) {

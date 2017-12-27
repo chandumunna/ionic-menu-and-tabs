@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { API } from "../api-url";
 @IonicPage({
   name: 'login-page'
 })
@@ -14,6 +14,7 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
+    console.log(API)
     console.log('ionViewDidLoad LoginPage');
   }
 
