@@ -2,7 +2,6 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { PageInterface } from '../../shared/interface/pages.interface';
 import { ThreeMenu } from '../../shared/page-menu/page-menu';
-import { TabsPage } from "./../tabs/tabs";
 
 @IonicPage()
 @Component({
@@ -10,10 +9,15 @@ import { TabsPage } from "./../tabs/tabs";
   templateUrl: 'main-side-menu.html',
 })
 export class MainSideMenuPage {
+  // Reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
 
+  // Basic root for our content view
   rootPage: string = 'TabsPage';
+  
+  // ThreeMenu from page-menu
   mymenu: PageInterface[] = ThreeMenu;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   ionViewDidLoad() { }

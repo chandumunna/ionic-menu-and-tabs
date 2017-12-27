@@ -8,7 +8,7 @@
   <ion-content>
     <ion-list>
       <button ion-item menuClose *ngFor="let p of mymenu" (click)="openPage(p)">
-        <ion-icon item-start [name]="p.icon"></ion-icon>
+        <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
         {{ p.title }}
       </button>
     </ion-list>
