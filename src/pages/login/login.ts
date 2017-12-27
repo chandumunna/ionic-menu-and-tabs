@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { API } from "../api-url";
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+
 @IonicPage({
   name: 'login-page'
 })
@@ -10,12 +10,11 @@ import { API } from "../api-url";
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
 
   ionViewDidLoad() {
-    console.log(API)
-    console.log('ionViewDidLoad LoginPage');
+    this.menuCtrl.enable(false, 'menuOne');
+    this.menuCtrl.enable(false, 'menuTwo');
   }
 
   MenuOne() {

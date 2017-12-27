@@ -34,7 +34,6 @@ export class SideMenuPage {
   ];
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SideMenuPage');
     console.log(this.navParams.get('id'))
     
     if (this.navParams.get('id') == 1) {
@@ -49,9 +48,7 @@ export class SideMenuPage {
   }
 
   openPage(page) {
-    console.log(page);
     this.nav.setRoot(page.pageName);
-    // this.navCtrl.push(page.pageName);
   }
 
   isActive(p) {
