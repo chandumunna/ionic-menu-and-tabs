@@ -1,3 +1,21 @@
+<ion-menu side="left" [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>MenuThree</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<!-- main navigation -->
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose *ngFor="let p of mymenu" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon"></ion-icon>
+        {{ p.title }}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-tabs>
+  <ion-tab *ngFor="let tab of tabsMenu" [root]="tab.root" tabTitle="{{tab.title}}" tabIcon="{{tab.icon}}"></ion-tab>
+</ion-tabs>

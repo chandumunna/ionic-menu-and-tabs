@@ -1,12 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the MainSideMenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { PageInterface } from '../../shared/interface/pages.interface';
+import { ThreeMenu } from '../../shared/page-menu/page-menu';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'main-side-menu.html',
 })
 export class MainSideMenuPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  @Input() mymenu;
+  // mymenu: PageInterface[] = ThreeMenu;
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MainSideMenuPage');
+    console.log('Hello from page-main-side-menu', this.mymenu)
+  }
+
+  openPage(p) {
+    
   }
 
 }

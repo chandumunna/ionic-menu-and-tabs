@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, MenuController } from 'ionic-angular';
 import { PageInterface } from "../../shared/interface/pages.interface";
 import { OneMenu, TwoMenu } from "../../shared/page-menu/page-menu";
+
 @IonicPage()
 @Component({
   selector: 'page-side-menu',
