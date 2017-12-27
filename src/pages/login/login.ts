@@ -27,7 +27,7 @@ export class LoginPage {
   }
 
   MenuThree() {
-    this.navCtrl.setRoot('MainPage');
+    this.navCtrl.setRoot('MainSideMenuPage');
   }
 
 }

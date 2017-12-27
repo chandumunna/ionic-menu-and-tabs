@@ -8,6 +8,6 @@ import { MainSideMenuPage } from './main-side-menu';
   ],
   imports: [
     IonicPageModule.forChild(MainSideMenuPage),
-  ],
+  ]
 })
-export class MainSideMenuPageModule {}
+export class MainSideMenuPageModule { }
