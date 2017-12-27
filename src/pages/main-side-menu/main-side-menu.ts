@@ -29,16 +29,17 @@ export class MainSideMenuPage {
     if (page.index) {
       params = { tabIndex: page.index };
     }
-    console.log(this.nav.getActiveChildNav())
+    console.log(this.nav.getActiveChildNavs())
     // The active child nav is our Tabs Navigation
-    if (this.nav.getActiveChildNav() && page.index != undefined) {
-      this.nav.getActiveChildNav().select(page.index);
+    let childNav = this.nav.getActiveChildNavs();
+
+    if (typeof childNav !='undefined' && typeof childNav[0] !='undefined' && page.index != undefined) {
+      childNav[0].select(page.index);
     } else {
-      // Tabs are not active, so reset the root page 
-      // In this case: moving to or from SpecialPage
       if (page.pageName == 'LoginPage') {
         this.navCtrl.push('LoginPage');
       }
+      
       this.nav.setRoot(page.pageName, params);
     }
   }
