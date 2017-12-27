@@ -25,12 +25,10 @@ export class MainSideMenuPage {
   openPage(page: PageInterface) {
     let params = {};
 
-    // The index is equal to the order of our tabs inside tabs.ts
     if (page.index) {
       params = { tabIndex: page.index };
     }
-    console.log(this.nav.getActiveChildNavs())
-    // The active child nav is our Tabs Navigation
+
     let childNav = this.nav.getActiveChildNavs();
 
     if (typeof childNav !='undefined' && typeof childNav[0] !='undefined' && page.index != undefined) {
@@ -39,7 +37,7 @@ export class MainSideMenuPage {
       if (page.pageName == 'LoginPage') {
         this.navCtrl.push('LoginPage');
       }
-      
+
       this.nav.setRoot(page.pageName, params);
     }
   }

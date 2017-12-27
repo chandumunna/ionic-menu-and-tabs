@@ -11,8 +11,8 @@ import { OneMenu, TwoMenu } from "../../shared/page-menu/page-menu";
 export class SideMenuPage {
 
   @ViewChild(Nav) nav: Nav;
-
-  rootPage = 'MyProfilePage';
+  id: number = this.navParams.get('id') || 1;
+  rootPage = (this.id == 1? 'MyProfilePage' : 'ContactPage');
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
 
