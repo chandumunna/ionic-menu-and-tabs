@@ -12,7 +12,7 @@ export class SideMenuPage {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage = 'my-profile';
+  rootPage = 'MyProfilePage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
 
