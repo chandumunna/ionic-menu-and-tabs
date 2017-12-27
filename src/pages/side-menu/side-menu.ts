@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, MenuController } from 'ionic-angular';
 import { PageInterface } from "../../shared/interface/pages.interface";
-
+import { OneMenu, TwoMenu } from "../../shared/page-menu/page-menu";
 @IonicPage()
 @Component({
   selector: 'page-side-menu',
@@ -15,16 +15,8 @@ export class SideMenuPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
 
-  pages: PageInterface[] = [
-    { title: 'My profile', pageName: 'my-profile', icon: 'home' },
-    { title: 'Contact', pageName: 'my-contact', icon: 'contact' },
-    { title: 'Logout', pageName: 'login-page', icon: 'exit' },
-  ];
-
-  pages2: PageInterface[] = [
-    { title: 'Contact', pageName: 'my-contact', icon: 'contact' },
-    { title: 'Logout', pageName: 'login-page', icon: 'exit' },
-  ];
+  pages: PageInterface[] = OneMenu;
+  pages2: PageInterface[] = TwoMenu;
 
   ionViewDidLoad() {
     // console.log(this.navParams.get('id'))
