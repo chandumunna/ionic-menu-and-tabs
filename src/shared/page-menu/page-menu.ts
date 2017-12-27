@@ -10,8 +10,8 @@ export const TwoMenu = [
 ];
 
 export const ThreeMenu = [
-  { title: 'My profile', pageName: 'my-profile', icon: 'home' },
-  { title: 'Contact', pageName: 'my-contact', icon: 'contact' },
+  { title: 'My profile', pageName: 'my-profile', icon: 'home', index: 0 },
+  { title: 'Contact', pageName: 'my-contact', icon: 'contact', index: 1 },
   { title: 'Logout', pageName: 'login-page', icon: 'exit' },
 ];
 
