@@ -13,8 +13,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) { }
 
   ionViewDidLoad() {
-    this.menuCtrl.enable(false, 'menuOne');
-    this.menuCtrl.enable(false, 'menuTwo');
+    // this.menuCtrl.enable(false, 'menuOne');
+    // this.menuCtrl.enable(false, 'menuTwo');
   }
 
   MenuOne() {

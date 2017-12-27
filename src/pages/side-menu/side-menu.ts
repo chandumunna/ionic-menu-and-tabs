@@ -34,20 +34,22 @@ export class SideMenuPage {
   ];
 
   ionViewDidLoad() {
-    console.log(this.navParams.get('id'))
+    // console.log(this.navParams.get('id'))
     
     if (this.navParams.get('id') == 1) {
-      console.log('ONE')
       this.menuCtrl.enable(true, 'menuOne');
       this.menuCtrl.enable(false, 'menuTwo');
     }else if (this.navParams.get('id') == 2) {
-      console.log('TWO')
       this.menuCtrl.enable(false, 'menuOne');
       this.menuCtrl.enable(true, 'menuTwo');
     }
   }
 
   openPage(page) {
+    if (page.pageName =='login-page') {
+      this.navCtrl.push('login-page');
+    }
+    
     this.nav.setRoot(page.pageName);
   }
 
