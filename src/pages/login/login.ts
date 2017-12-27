@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
-@IonicPage({
-  name: 'login-page'
-})
+@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
