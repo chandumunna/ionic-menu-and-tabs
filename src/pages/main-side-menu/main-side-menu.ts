@@ -29,7 +29,7 @@ export class MainSideMenuPage {
     if (page.index) {
       params = { tabIndex: page.index };
     }
-
+    console.log(this.nav.getActiveChildNav())
     // The active child nav is our Tabs Navigation
     if (this.nav.getActiveChildNav() && page.index != undefined) {
       this.nav.getActiveChildNav().select(page.index);
