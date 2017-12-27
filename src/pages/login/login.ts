@@ -26,4 +26,8 @@ export class LoginPage {
     });
   }
 
+  MenuThree() {
+    this.navCtrl.setRoot('MainPage');
+  }
+
 }
