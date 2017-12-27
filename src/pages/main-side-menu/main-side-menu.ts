@@ -12,7 +12,7 @@ import { TabsPage } from "./../tabs/tabs";
 export class MainSideMenuPage {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage = 'TabsPage';
+  rootPage: string = 'TabsPage';
   mymenu: PageInterface[] = ThreeMenu;
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
