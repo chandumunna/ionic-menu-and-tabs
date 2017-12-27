@@ -10,9 +10,9 @@ export const TwoMenu = [
 ];
 
 export const ThreeMenu = [
-  { title: 'My profile', pageName: 'TabsPage', tabComponent: 'TabMyProfile', index: 0, icon: 'home' },
-  { title: 'Contact', pageName: 'TabsPage', tabComponent: 'TabContact', index: 1, icon: 'contacts' },
-  { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle' },
+  { title: 'My profile', pageName: 'TabsPage', tabComponent: 'TabMyProfile', index: 0, icon: 'home', linkName: 'MyProfilePage' },
+  { title: 'Contact', pageName: 'TabsPage', tabComponent: 'TabContact', index: 1, icon: 'contacts', linkName: 'ContactPage' },
+  // { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle' },
   { title: 'Logout', pageName: 'LoginPage', icon: 'exit' },
 ];
 

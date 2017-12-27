@@ -32,10 +32,10 @@ export class SideMenuPage {
   }
 
   openPage(page) {
-    if (page.pageName =='login-page') {
-      this.navCtrl.push('login-page');
+    if (page.pageName == 'LoginPage') {
+      this.navCtrl.push('LoginPage');
     }
-    
+
     this.nav.setRoot(page.pageName);
   }
 

@@ -4,4 +4,5 @@ export interface PageInterface {
   tabComponent?: any;
   index?: number;
   icon: string;
+  linkName?: string;
 }

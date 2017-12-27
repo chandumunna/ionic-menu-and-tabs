@@ -43,20 +43,20 @@ export class MainSideMenuPage {
   }
 
   isActive(page: PageInterface) {
-    // Again the Tabs Navigation
-    // let childNav = this.nav.getActiveChildNavs();
-    // if (typeof childNav !='undefined' && typeof childNav[0] !='undefined') {
-    //   if (childNav[0].getSelected() && childNav[0].getSelected().root === page.tabComponent) {
-    //     return 'primary';
-    //   }
-    //   return;
-    // }
+    
+    let childNav = this.nav.getActiveChildNavs();
+    if (typeof childNav !='undefined' && typeof childNav[0] !='undefined') {
+      if (childNav[0].getSelected() && childNav[0].getSelected().root === page.linkName) {
+        return 'primary';
+      }
+      
+      return;
+    }
 
-    // // Fallback needed when there is no active childnav (tabs not active)
-    // if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
-    //   return 'primary';
-    // }
-    // return;
+    if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
+      return 'primary';
+    }
+    return;
   }
 
 }
